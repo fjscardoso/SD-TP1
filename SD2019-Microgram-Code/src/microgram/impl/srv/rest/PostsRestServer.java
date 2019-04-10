@@ -19,7 +19,7 @@ public class PostsRestServer {
 		System.setProperty("java.util.logging.SimpleFormatter.format", "%4$s: %5$s");
 	}
 	
-	public static final int PORT = 7777;
+	public static final int PORT = 8888;
 	public static final String SERVICE = "Microgram-Posts";
 	public static String SERVER_BASE_URI = "http://%s:%s/rest";
 	
@@ -32,8 +32,8 @@ public class PostsRestServer {
 		
 		ResourceConfig config = new ResourceConfig();
 
-//		config.register(new _TODO_RestPostsResources(serverURI)); TODO
-		
+		config.register(new _TODO_RestPostsResources(serverURI));
+
 		JdkHttpServerFactory.createHttpServer( URI.create(serverURI.replace(ip, "0.0.0.0")), config);
 
 		Log.info(String.format("%s Server ready @ %s\n",  SERVICE, serverURI));

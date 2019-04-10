@@ -5,11 +5,7 @@ import static microgram.api.java.Result.ok;
 import static microgram.api.java.Result.ErrorCode.CONFLICT;
 import static microgram.api.java.Result.ErrorCode.NOT_FOUND;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import microgram.api.Profile;
@@ -45,10 +41,25 @@ public class JavaProfiles extends RestResource implements microgram.api.java.Pro
 		following.put( profile.getUserId(), new HashSet<>());
 		return ok();
 	}
-	
+
+	//incompleto apagar os posts e os likes
 	@Override
 	public Result<Void> deleteProfile(String userId) {
-		return Result.error(ErrorCode.NOT_IMPLEMENTED);
+
+		Profile res = users.get( userId );
+		if( res == null )
+			return error(NOT_FOUND);
+
+		users.remove(userId);
+		following.remove(userId);
+		followers.remove(userId);
+
+		Iterator<String> it = followers.keySet().iterator();
+		String n = it.next();
+		while(it.hasNext())
+			followers.get(n).remove(userId);
+
+		return ok();
 	}
 	
 	@Override

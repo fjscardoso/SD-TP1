@@ -35,9 +35,17 @@ public class JavaPosts implements Posts {
 			return error(NOT_FOUND);
 	}
 
+	//incompleto
 	@Override
 	public Result<Void> deletePost(String postId) {
-		return Result.error(ErrorCode.NOT_IMPLEMENTED);
+		Post res = posts.get(postId);
+		if (res == null)
+			return error(NOT_FOUND);
+
+		posts.remove(postId);
+		userPosts.get(res.getOwnerId()).remove(postId);
+
+		return ok();
 	}
 
 	@Override
