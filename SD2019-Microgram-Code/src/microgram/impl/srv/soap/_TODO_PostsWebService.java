@@ -1,7 +1,7 @@
 package microgram.impl.srv.soap;
 
 import microgram.api.Post;
-import microgram.api.java.Posts;
+import microgram.impl.srv.java.Posts;
 import microgram.api.soap.MicrogramException;
 import microgram.api.soap.SoapPosts;
 import microgram.impl.srv.java.JavaPosts;

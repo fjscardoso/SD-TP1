@@ -2,27 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="272a5cda-f20f-49a7-932f-20cf4795e558" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/java/Posts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/java/Profiles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/java/RestPosts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/java/RestProfiles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SD2019-Microgram-Code/sd2019-tp1.props" beforeDir="false" afterPath="$PROJECT_DIR$/SD2019-Microgram-Code/sd2019-tp1.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SD2019-Microgram-Code/src/discovery/Discovery.java" beforeDir="false" afterPath="$PROJECT_DIR$/SD2019-Microgram-Code/src/discovery/Discovery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/clt/rest/RestClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/clt/rest/RestClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/clt/rest/_TODO_RestPostsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/clt/rest/_TODO_RestPostsClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/clt/rest/_TODO_RestProfilesClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/clt/rest/_TODO_RestProfilesClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/java/JavaPosts.java" beforeDir="false" afterPath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/java/JavaPosts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/java/JavaProfiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/java/JavaProfiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/rest/PostsRestServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/rest/PostsRestServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/rest/ProfilesRestServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/rest/ProfilesRestServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/rest/RestMediaStorageServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/rest/RestMediaStorageServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/rest/_TODO_RestPostsResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/rest/_TODO_RestPostsResources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/rest/_TODO_RestProfilesResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/rest/_TODO_RestProfilesResources.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/soap/PostsSoapServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/soap/PostsSoapServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/soap/_TODO_PostsWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/soap/_TODO_PostsWebService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/soap/_TODO_ProfilesWebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/soap/_TODO_ProfilesWebService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SD2019-Microgram-Code/testn-sd1.sh" beforeDir="false" afterPath="$PROJECT_DIR$/SD2019-Microgram-Code/testn-sd1.sh" afterDir="false" />
     </list>
     <list id="18982f0f-85e3-4f71-a9a0-b9663c398468" name="client - deletePost" comment="" />
     <list id="d67c82ad-3a5c-48c9-bffd-b5807b249b6b" name="Revert &quot;client - deletePost&quot;" comment="Revert &quot;client - deletePost&quot;&#10;&#10;This reverts commit a22ee0ea" />
@@ -56,22 +38,49 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/soap/_TODO_PostsWebService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="300">
+              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#412#413#0" expanded="true" />
-                <element signature="e#446#447#0" expanded="true" />
+                <element signature="e#392#393#0" expanded="true" />
+                <element signature="e#426#427#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/sd2019/sd19-tp1-api/1.0/sd19-tp1-api-1.0.jar!/microgram/api/soap/SoapPosts.class">
+        <entry file="file://$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/java/JavaPosts.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="12" selection-start-line="12" selection-end-line="16" selection-end-column="1" />
+            <state relative-caret-position="330">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/soap/PostsSoapServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="647">
+              <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/soap/_TODO_ProfilesWebService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,11 +129,12 @@
       <find>time</find>
       <find>followers</find>
       <find>RestPostsResources</find>
-      <find>javaposts</find>
       <find>java.net.uri</find>
       <find>javaprofiles</find>
       <find>todo</find>
       <find>getfollowing</find>
+      <find>api.java</find>
+      <find>javaposts</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -157,6 +167,7 @@
         <option value="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/java/RestPosts.java" />
         <option value="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/java/JavaProfiles.java" />
         <option value="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/soap/PostsSoapServer.java" />
+        <option value="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/clt/java/_TODO_RetryPostsClient.java" />
         <option value="$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/soap/_TODO_PostsWebService.java" />
       </list>
     </option>
@@ -242,6 +253,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -375,8 +388,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -540,7 +551,8 @@
       <workItem from="1556566812020" duration="410000" />
       <workItem from="1556667362472" duration="3695000" />
       <workItem from="1556677566569" duration="1715000" />
-      <workItem from="1556750642788" duration="273000" />
+      <workItem from="1556750642788" duration="449000" />
+      <workItem from="1556752622147" duration="786000" />
     </task>
     <task id="LOCAL-00001" summary="client - deletePost">
       <created>1554699188100</created>
@@ -549,11 +561,25 @@
       <option name="project" value="LOCAL" />
       <updated>1554699188100</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="commit">
+      <created>1556751066211</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1556751066211</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Revert &quot;commit&quot;&#10;&#10;This reverts commit 325c1767">
+      <created>1556751132206</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556751132206</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82723000" />
+    <option name="totallyTimeSpent" value="83685000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -568,7 +594,7 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49591836" visible="true" weight="0.41599354" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49591836" visible="true" weight="0.42245558" />
       <window_info id="Structure" order="1" sideWeight="0.5040816" side_tool="true" weight="0.40306947" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -582,7 +608,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32876712" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49757674" weight="0.32876712" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49757674" visible="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Docker" order="8" sideWeight="0.4983845" weight="0.32876712" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5024233" side_tool="true" weight="0.32876712" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32876712" />
@@ -656,7 +682,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="client - deletePost" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="commit" />
+    <MESSAGE value="Revert &quot;commit&quot;&#10;&#10;This reverts commit 325c1767" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;commit&quot;&#10;&#10;This reverts commit 325c1767" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$MAVEN_REPOSITORY$/sd2019/sd19-tp1-api/1.0/sd19-tp1-api-1.0.jar!/microgram/api/java/OkResult.class">
@@ -930,13 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/clt/java/_TODO_RetryPostsClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/sd2019/sd19-tp1-api/1.0/sd19-tp1-api-1.0.jar!/microgram/api/rest/RestPosts.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1019,16 +1040,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/java/JavaPosts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-795">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/java/RestProfiles.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7">
@@ -1072,16 +1083,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/soap/_TODO_ProfilesWebService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SD2019-Microgram-Code/sd2019-tp1.props">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1093,35 +1094,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/soap/PostsSoapServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="33" column="45" lean-forward="true" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/soap/_TODO_PostsWebService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#446#447#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/sd2019/sd19-tp1-api/1.0/sd19-tp1-api-1.0.jar!/microgram/api/soap/SoapPosts.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" selection-start-line="12" selection-end-line="16" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1139,6 +1111,68 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/soap/PostsSoapServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/sd2019/sd19-tp1-api/1.0/sd19-tp1-api-1.0.jar!/microgram/api/soap/SoapPosts.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/clt/java/_TODO_RetryPostsClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/soap/_TODO_ProfilesWebService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/java/JavaPosts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SD2019-Microgram-Code/src/microgram/impl/srv/soap/_TODO_PostsWebService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#426#427#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -24,7 +24,7 @@ public class PostsSoapServer {
 	public static String SERVER_BASE_URI = "http://%s:%s/soap";
 	
 	public static void main(String[] args) throws Exception {
-
+/**
 		// Create an HTTP server, accepting requests at PORT (from all local interfaces)
 		HttpServer server = HttpServer.create(new InetSocketAddress("0.0.0.0", PORT), 0);
 
@@ -42,5 +42,6 @@ public class PostsSoapServer {
 
 		String ip = IP.hostAddress();
 		Log.info(String.format("%s Soap Server ready @ %s\n", SERVICE, ip + ":" + PORT));
-	}
+	*/
+ 	}
 }
