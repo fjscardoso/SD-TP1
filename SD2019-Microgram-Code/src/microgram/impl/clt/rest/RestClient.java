@@ -19,7 +19,7 @@ import microgram.api.java.Result;
 import microgram.api.java.Result.ErrorCode;
 import microgram.impl.clt.java.RetryClient;
 
-abstract class RestClient extends RetryClient {
+public abstract class RestClient extends RetryClient {
 
 	private static final int READ_TIMEOUT = 15000;
 	private static final int CONNECT_TIMEOUT = 10000;

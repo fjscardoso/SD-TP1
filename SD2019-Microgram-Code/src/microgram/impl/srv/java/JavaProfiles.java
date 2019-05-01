@@ -5,36 +5,53 @@ import static microgram.api.java.Result.ok;
 import static microgram.api.java.Result.ErrorCode.CONFLICT;
 import static microgram.api.java.Result.ErrorCode.NOT_FOUND;
 
+import java.net.URI;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import discovery.Discovery;
 import microgram.api.Profile;
 import microgram.api.java.Result;
 import microgram.api.java.Result.ErrorCode;
+import microgram.impl.clt.rest._TODO_RestPostsClient;
+import microgram.impl.clt.rest._TODO_RestProfilesClient;
 import microgram.impl.srv.rest.RestResource;
 
-public class JavaProfiles extends RestResource implements microgram.api.java.Profiles {
+public class JavaProfiles extends RestResource implements microgram.impl.srv.java.Profiles {
 
 	protected Map<String, Profile> users = new HashMap<>();
 	protected Map<String, Set<String>> followers = new HashMap<>();
 	protected Map<String, Set<String>> following = new HashMap<>();
-	
-	
+
+	protected _TODO_RestPostsClient client;
+
+	public JavaProfiles(URI uri){
+		this.client = new _TODO_RestPostsClient(uri);
+
+	}
+
 	@Override
 	public Result<Profile> getProfile(String userId) {
 		Profile res = users.get( userId );
-		if( res == null ) 
+		if( res == null )
 			return error(NOT_FOUND);
 
 		res.setFollowers( followers.get(userId).size() );
 		res.setFollowing( following.get(userId).size() );
+
+//		_TODO_RestPostsClient client = new _TODO_RestPostsClient(Discovery.findUrisOf("Microgram-Posts",1)[0]);
+		if(this.client.getPosts(userId).isOK())
+		res.setPosts(this.client.getPosts(userId).value().size());
+		else
+			res.setPosts(0);
+
 		return ok(res);
 	}
 
 	@Override
 	public Result<Void> createProfile(Profile profile) {
 		Profile res = users.putIfAbsent( profile.getUserId(), profile );
-		if( res != null ) 
+		if( res != null )
 			return error(CONFLICT);
 		
 		followers.put( profile.getUserId(), new HashSet<>());
@@ -42,7 +59,7 @@ public class JavaProfiles extends RestResource implements microgram.api.java.Pro
 		return ok();
 	}
 
-	//incompleto apagar os posts e os likes
+	//rever
 	@Override
 	public Result<Void> deleteProfile(String userId) {
 
@@ -51,13 +68,27 @@ public class JavaProfiles extends RestResource implements microgram.api.java.Pro
 			return error(NOT_FOUND);
 
 		users.remove(userId);
+
+		Iterator<String> it = following.get(userId).iterator();
+		while(it.hasNext()) {
+			String n = it.next();
+			followers.get(n).remove(userId);
+		}
+
 		following.remove(userId);
 		followers.remove(userId);
 
-		Iterator<String> it = followers.keySet().iterator();
-		String n = it.next();
-		while(it.hasNext())
-			followers.get(n).remove(userId);
+
+		try {
+//			_TODO_RestPostsClient client = new _TODO_RestPostsClient(Discovery.findUrisOf("Microgram-Posts",1)[0]);
+			if(this.client.removeUser(userId).isOK())
+				this.client.removeUser(userId);
+
+			return ok();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
 		return ok();
 	}
@@ -99,5 +130,14 @@ public class JavaProfiles extends RestResource implements microgram.api.java.Pro
 			return error(NOT_FOUND);
 		else
 			return ok(s1.contains( userId2 ) && s2.contains( userId1 ));
+	}
+
+	@Override
+	public Result<Set<String>> getFollowing(String userId) {
+		Set<String> res = following.get(userId);
+		if (res != null)
+			return ok(res);
+		else
+			return error( NOT_FOUND );
 	}
 }

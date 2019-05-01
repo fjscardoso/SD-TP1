@@ -10,7 +10,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 import microgram.api.Post;
-import microgram.api.java.Posts;
+import microgram.impl.srv.java.Posts;
 import microgram.api.java.Result;
 import microgram.api.rest.RestPosts;
 
@@ -38,7 +38,10 @@ public class _TODO_RestPostsClient extends RestClient implements Posts {
 
 	@Override
 	public Result<Void> deletePost(String s) {
-		Response r = target.path("/" + s).request().accept(MediaType.APPLICATION_JSON).delete();
+		Response r = target.path("/" + s)
+				.request()
+				.accept(MediaType.APPLICATION_JSON)
+				.delete();
 		return super.responseContents(r, Status.OK, new GenericType<Void>(){});
 	}
 
@@ -53,12 +56,22 @@ public class _TODO_RestPostsClient extends RestClient implements Posts {
 	}
 
 	@Override
-	public Result<List<String>> getPosts(String s) {
-		return null;
+	public Result<List<String>> getPosts(String userId) {
+		Response r = target.path("/from/" + userId).request().accept(MediaType.APPLICATION_JSON).get();
+		return super.responseContents(r, Status.OK, new GenericType<List<String>>(){});
 	}
 
 	@Override
 	public Result<List<String>> getFeed(String s) {
 		return null;
+	}
+
+	@Override
+	public Result<Void> removeUser(String userId) {
+		Response r = target.path("/remove/" + userId)
+				.request()
+				.accept(MediaType.APPLICATION_JSON)
+				.delete();
+		return super.responseContents(r, Status.OK, new GenericType<Void>(){});
 	}
 }

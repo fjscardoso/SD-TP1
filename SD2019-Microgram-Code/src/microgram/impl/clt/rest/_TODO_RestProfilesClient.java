@@ -2,6 +2,7 @@ package microgram.impl.clt.rest;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Set;
 
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.GenericType;
@@ -10,7 +11,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 import microgram.api.Profile;
-import microgram.api.java.Profiles;
+import microgram.impl.srv.java.Profiles;
 import microgram.api.java.Result;
 import microgram.api.rest.RestProfiles;
 
@@ -23,7 +24,7 @@ public class _TODO_RestProfilesClient extends RestClient implements Profiles {
 
 	@Override
 	public Result<Profile> getProfile(String userId) {
-		Response r = target.path(userId)
+		Response r = target.path("/" + userId)
 				.request()
 				.accept(MediaType.APPLICATION_JSON)
 				.get();
@@ -41,8 +42,11 @@ public class _TODO_RestProfilesClient extends RestClient implements Profiles {
 	}
 
 	@Override
-	public Result<Void> deleteProfile(String s) {
-		Response r = target.path("/" + s).request().accept(MediaType.APPLICATION_JSON).delete();
+	public Result<Void> deleteProfile(String userId) {
+		Response r = target.path("/" + userId)
+				.request()
+				.accept(MediaType.APPLICATION_JSON)
+				.delete();
 		return super.responseContents(r, Status.OK, new GenericType<Void>(){});
 	}
 
@@ -66,6 +70,17 @@ public class _TODO_RestProfilesClient extends RestClient implements Profiles {
 	@Override
 	public Result<Boolean> isFollowing(String s, String s1) {
 		return null;
+	}
+
+	@Override
+	public Result<Set<String>> getFollowing(String userId) {
+		Response r = target
+				.path("/" + userId + "/following")
+				.request()
+				.accept(MediaType.APPLICATION_JSON)
+				.get();
+
+		return super.responseContents(r, Status.OK, new GenericType<Set<String>>() {});
 	}
 
 

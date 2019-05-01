@@ -4,20 +4,15 @@ import static microgram.api.java.Result.error;
 import static microgram.api.java.Result.ok;
 import static microgram.api.java.Result.ErrorCode.CONFLICT;
 import static microgram.api.java.Result.ErrorCode.NOT_FOUND;
-import static microgram.api.java.Result.ErrorCode.NOT_IMPLEMENTED;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import discovery.Discovery;
+import microgram.impl.clt.rest._TODO_RestProfilesClient;
+
+import java.net.URI;
+import java.util.*;
 
 import microgram.api.Post;
-import microgram.api.java.Posts;
 import microgram.api.java.Result;
-import microgram.api.java.Result.ErrorCode;
 import utils.Hash;
 
 public class JavaPosts implements Posts {
@@ -35,7 +30,6 @@ public class JavaPosts implements Posts {
 			return error(NOT_FOUND);
 	}
 
-	//incompleto
 	@Override
 	public Result<Void> deletePost(String postId) {
 		Post res = posts.get(postId);
@@ -43,6 +37,7 @@ public class JavaPosts implements Posts {
 			return error(NOT_FOUND);
 
 		posts.remove(postId);
+		likes.remove(postId);
 		userPosts.get(res.getOwnerId()).remove(postId);
 
 		return ok();
@@ -58,12 +53,13 @@ public class JavaPosts implements Posts {
 			Set<String> posts = userPosts.get(post.getOwnerId());
 			if (posts == null)
 				userPosts.put(post.getOwnerId(), posts = new LinkedHashSet<>());
+
 			posts.add(postId);
 
-			return ok(postId);
+//			_TODO_RestProfilesClient client = new _TODO_RestProfilesClient(Discovery.findUrisOf("Microgram-Profiles",1)[0]);
+//			System.out.println("cliente userId: " + client.getProfile(post.getOwnerId()).value().getUserId());
 		}
-		else
-			return error(CONFLICT);
+		return ok(postId);
 	}
 
 	@Override
@@ -107,6 +103,40 @@ public class JavaPosts implements Posts {
 	
 	@Override
 	public Result<List<String>> getFeed(String userId) {
-		return error(NOT_IMPLEMENTED);
+
+		try {
+			_TODO_RestProfilesClient client = new _TODO_RestProfilesClient(Discovery.findUrisOf("Microgram-Profiles",1)[0]);
+			if(!client.getFollowing(userId).isOK())
+				return error(NOT_FOUND);
+			Result<Set<String>> set = client.getFollowing(userId);
+			Set<String> set2 = new HashSet<>();
+			Iterator<String> iter = set.value().iterator();
+			while(iter.hasNext()){
+				set2.addAll(userPosts.get(iter.next()));
+			}
+			return ok(new ArrayList<>(set2));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return error(NOT_FOUND);
+
 	}
+
+	public Result<Void> removeUser(String userId){
+
+		if (userPosts.get(userId) == null)
+			return error(NOT_FOUND);
+
+		Iterator<String> iter = userPosts.get(userId).iterator();
+		while(iter.hasNext()){
+			String next = iter.next();
+			posts.remove(next);
+			likes.remove(next);
+		}
+
+		userPosts.remove(userId);
+
+		return ok();
+	}
+
 }

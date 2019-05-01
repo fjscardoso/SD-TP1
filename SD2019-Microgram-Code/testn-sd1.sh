@@ -12,6 +12,7 @@ fi
 
 #update the images, in particular the tester 
 docker pull smduarte/sd19-tp1-tester
+docker pull $2
 
 
 #execute the client with the given command line parameters

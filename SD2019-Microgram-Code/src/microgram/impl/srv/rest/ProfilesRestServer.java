@@ -32,12 +32,13 @@ public class ProfilesRestServer {
 		
 		ResourceConfig config = new ResourceConfig();
 
-		config.register(new _TODO_RestProfilesResources(serverURI));
+		config.register(new _TODO_RestProfilesResources(Discovery.findUrisOf("Microgram-Posts",1)[0]));
 		
 		JdkHttpServerFactory.createHttpServer( URI.create(serverURI.replace(ip, "0.0.0.0")), config);
 
 		Log.info(String.format("%s Server ready @ %s\n",  SERVICE, serverURI));
 		
 		Discovery.announce(SERVICE, serverURI);
+
 	}
 }

@@ -4,8 +4,8 @@ import java.net.URI;
 import java.util.List;
 
 import microgram.api.Post;
-import microgram.api.java.Posts;
-import microgram.api.rest.RestPosts;
+import microgram.impl.srv.java.Posts;
+import microgram.impl.srv.java.RestPosts;
 import microgram.impl.srv.java.JavaPosts;
 
 // Make this class concrete.
@@ -50,6 +50,11 @@ public class _TODO_RestPostsResources extends RestResource implements RestPosts 
 	@Override
 	public synchronized List<String> getFeed(String userId) {
 		return super.resultOrThrow(impl.getFeed(userId));
+	}
+
+	@Override
+	public void removeUser(String userId) {
+		super.resultOrThrow(impl.removeUser(userId));
 	}
 
 }

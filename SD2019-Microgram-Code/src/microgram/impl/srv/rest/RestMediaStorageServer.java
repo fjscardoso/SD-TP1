@@ -3,6 +3,7 @@ package microgram.impl.srv.rest;
 import java.net.URI;
 import java.util.logging.Logger;
 
+import discovery.Discovery;
 import org.glassfish.jersey.jdkhttp.JdkHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 
@@ -32,5 +33,7 @@ public class RestMediaStorageServer {
         JdkHttpServerFactory.createHttpServer(URI.create(serverURI.replace(ip, "0.0.0.0")), config);
 
         Log.info(String.format("%s Server ready @ %s\n", SERVICE, serverURI));
+
+        Discovery.announce(SERVICE, serverURI);
     }
 }
