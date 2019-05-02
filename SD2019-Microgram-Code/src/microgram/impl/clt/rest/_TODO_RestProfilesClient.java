@@ -66,8 +66,14 @@ public class _TODO_RestProfilesClient extends RestClient implements Profiles {
 	}
 
 	@Override
-	public Result<Boolean> isFollowing(String s, String s1) {
-		return null;
+	public Result<Boolean> isFollowing(String userId1, String userId2) {
+		Response r = target
+				.path("/" + userId1 + "/following/" + userId2)
+				.request()
+				.accept(MediaType.APPLICATION_JSON)
+				.get();
+
+		return super.responseContents(r, Status.OK, new GenericType<Boolean>() {});
 	}
 
 	@Override

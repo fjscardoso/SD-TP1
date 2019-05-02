@@ -12,7 +12,7 @@ import javax.ws.rs.core.Response.Status;
 import microgram.api.Post;
 import microgram.impl.srv.java.Posts;
 import microgram.api.java.Result;
-import microgram.api.rest.RestPosts;
+import microgram.impl.srv.java.RestPosts;
 
 //TODO Make this class concrete
 public class _TODO_RestPostsClient extends RestClient implements Posts {
@@ -23,8 +23,12 @@ public class _TODO_RestPostsClient extends RestClient implements Posts {
 
 
 	@Override
-	public Result<Post> getPost(String s) {
-		Response r = target.path("/" + s).request().accept(MediaType.APPLICATION_JSON).get();
+	public Result<Post> getPost(String postId) {
+		Response r = target
+				.path("/" + postId)
+				.request()
+				.accept(MediaType.APPLICATION_JSON)
+				.get();
 		return super.responseContents(r, Status.OK, new GenericType<Post>(){});
 	}
 
@@ -46,24 +50,38 @@ public class _TODO_RestPostsClient extends RestClient implements Posts {
 	}
 
 	@Override
-	public Result<Void> like(String s, String s1, boolean b) {
+	public Result<Void> like(String postId, String userId, boolean b) {
 		return null;
 	}
 
 	@Override
-	public Result<Boolean> isLiked(String s, String s1) {
-		return null;
+	public Result<Boolean> isLiked(String postId, String userId) {
+		Response r = target
+				.path("/" + postId + "/likes/" + userId)
+				.request()
+				.accept(MediaType.APPLICATION_JSON)
+				.get();
+		return super.responseContents(r, Status.OK, new GenericType<Boolean>(){});
 	}
 
 	@Override
 	public Result<List<String>> getPosts(String userId) {
-		Response r = target.path("/from/" + userId).request().accept(MediaType.APPLICATION_JSON).get();
+		Response r = target
+				.path("/from/" + userId)
+				.request()
+				.accept(MediaType.APPLICATION_JSON)
+				.get();
 		return super.responseContents(r, Status.OK, new GenericType<List<String>>(){});
 	}
 
 	@Override
-	public Result<List<String>> getFeed(String s) {
-		return null;
+	public Result<List<String>> getFeed(String userId) {
+		Response r = target
+				.path("/feed/" + userId)
+				.request()
+				.accept(MediaType.APPLICATION_JSON)
+				.get();
+		return super.responseContents(r, Status.OK, new GenericType<List<String>>(){});
 	}
 
 	@Override
