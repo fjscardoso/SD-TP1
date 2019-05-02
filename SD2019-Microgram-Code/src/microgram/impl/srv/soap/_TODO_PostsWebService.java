@@ -19,5 +19,5 @@ public abstract class _TODO_PostsWebService extends SoapService implements SoapP
 	public Post getPost( String postId ) throws MicrogramException {
 		return super.resultOrThrow( impl.getPost(postId));
 	}
-	
+
 }
