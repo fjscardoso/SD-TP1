@@ -68,10 +68,16 @@ public class JavaProfiles extends RestResource implements microgram.impl.srv.jav
 
 		users.remove(userId);
 
+		Iterator<String> iter = followers.get(userId).iterator();
 		Iterator<String> it = following.get(userId).iterator();
 		while(it.hasNext()) {
 			String n = it.next();
 			followers.get(n).remove(userId);
+		}
+
+		while(iter.hasNext()) {
+			String n = iter.next();
+			following.get(n).remove(userId);
 		}
 
 		following.remove(userId);

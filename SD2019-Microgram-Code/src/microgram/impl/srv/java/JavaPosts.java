@@ -125,7 +125,7 @@ public class JavaPosts implements Posts {
 	public Result<Void> removeUser(String userId){
 
 		if (userPosts.get(userId) == null)
-			return error(NOT_FOUND);
+			return ok();
 
 		Iterator<String> iter = userPosts.get(userId).iterator();
 		while(iter.hasNext()){

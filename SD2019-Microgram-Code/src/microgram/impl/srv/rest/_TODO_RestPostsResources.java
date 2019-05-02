@@ -53,7 +53,7 @@ public class _TODO_RestPostsResources extends RestResource implements RestPosts 
 	}
 
 	@Override
-	public void removeUser(String userId) {
+	public synchronized void removeUser(String userId) {
 		super.resultOrThrow(impl.removeUser(userId));
 	}
 
