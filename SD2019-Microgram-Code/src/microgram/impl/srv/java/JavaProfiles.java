@@ -81,10 +81,7 @@ public class JavaProfiles extends RestResource implements microgram.impl.srv.jav
 
 		try {
 //			_TODO_RestPostsClient client = new _TODO_RestPostsClient(Discovery.findUrisOf("Microgram-Posts",1)[0]);
-			if(this.client.removeUser(userId).isOK())
-				this.client.removeUser(userId);
-
-			return ok();
+			this.client.removeUser(userId);
 
 		} catch (Exception e) {
 			e.printStackTrace();

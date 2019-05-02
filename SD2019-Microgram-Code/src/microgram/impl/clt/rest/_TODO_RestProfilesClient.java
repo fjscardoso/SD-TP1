@@ -50,8 +50,6 @@ public class _TODO_RestProfilesClient extends RestClient implements Profiles {
 		return super.responseContents(r, Status.OK, new GenericType<Void>(){});
 	}
 
-
-	//perguntar ao anciaes queryParam(s)
 	@Override
 	public Result<List<Profile>> search(String s) {
 		Response r = target
