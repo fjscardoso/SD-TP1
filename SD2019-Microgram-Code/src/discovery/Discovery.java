@@ -17,6 +17,8 @@ public class Discovery {
 	static final InetSocketAddress DISCOVERY_ADDR = new InetSocketAddress("226.226.226.226", 2266);
 	static final int DISCOVERY_PERIOD = 1000;
 	static final int DISCOVERY_TIMEOUT = 30000;
+	static final int PORT = 2266;
+	static final int MAX_DATAGRAM_SIZE = 65536;
 
 	private static final String DELIMITER = "\t";
 
@@ -57,18 +59,17 @@ public class Discovery {
 		URI[] uris = new URI[minRepliesNeeded];
 
 		try{
-			//Creating Multicast Socket
 			final InetAddress group = InetAddress.getByName("226.226.226.226");
 			if(!group.isMulticastAddress()) {
-				System.out.println( "Use range : 224.0.0.0 -- 239.255.255.255");
+				System.out.println( "Not a multicast address (use range : 224.0.0.0 -- 239.255.255.255)");
 				System.exit(1);
 			}
 
-			MulticastSocket socket = new MulticastSocket(2266);
+			MulticastSocket socket = new MulticastSocket(PORT);
 			socket.joinGroup(group);
 			int nreplies = 0;
 			while (nreplies < minRepliesNeeded) {
-				byte[] buffer = new byte[65536];
+				byte[] buffer = new byte[MAX_DATAGRAM_SIZE];
 				DatagramPacket request = new DatagramPacket(buffer, buffer.length);
 				socket.receive(request);
 				String message = new String (request.getData(), 0, request.getLength());

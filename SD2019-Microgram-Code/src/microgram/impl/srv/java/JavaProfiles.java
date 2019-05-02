@@ -59,7 +59,6 @@ public class JavaProfiles extends RestResource implements microgram.impl.srv.jav
 		return ok();
 	}
 
-	//rever
 	@Override
 	public Result<Void> deleteProfile(String userId) {
 
